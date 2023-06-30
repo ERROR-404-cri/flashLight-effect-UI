@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#flashLight {
+  cursor: pointer;
+  position: relative;
+  --pointerXPosition: 50vw;
+  --pointerYPosition: 50vh;
+}
+
+#flashLight::before {
+  content: "";
+  position: absolute;
+  background: radial-gradient(
+    circle at var(--pointerXPosition) var(--pointerYPosition),
+    transparent 0%,
+    #0000005e 50px,
+    black 120px
+  );
+  width: 100%;
+  height: 100%;
+}
